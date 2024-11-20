@@ -1,0 +1,13 @@
+Sitemap: https://smiledenta.ru/sitemap.xml
+
+SetEnvIfNoCase User-Agent .*yandex.* search_robot
+SetEnvIfNoCase User-Agent .*mail.* search_robot
+SetEnvIfNoCase User-Agent .*ahrefsbot.* search_robot
+SetEnvIfNoCase User-Agent .*MegaIndexBot.* search_robot
+SetEnvIfNoCase User-Agent .*serpstatbot.* search_robot
+SetEnvIfNoCase User-Agent .*MJ12bot.* search_robot
+SetEnvIfNoCase User-Agent .*ia_archiver.* search_robot
+SetEnvIfNoCase User-Agent .*LinkpadBot.* search_robot
+Order Allow,Deny
+Allow from all
+Deny from env=search_robot
